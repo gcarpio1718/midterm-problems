@@ -12,7 +12,10 @@ function halfSquare(num1) {
   return squaredNumber; 
 }
 
-function isLong() {
+function isLong(string) {
+  if (string.length() >= 15){
+    return true;
+  }
 }
 
 function exclaim(string) {
@@ -40,11 +43,11 @@ function exclaim(string) {
 
 function countWords(string) {
   
-  console.log("String " + string);
+  // console.log("String " + string);
 
-  console.log(string.split(" "));
+  // console.log(string.split(" "));
 
-  console.log(string.split (" ").length);
+  // console.log(string.split (" ").length);
 
   
 
@@ -52,24 +55,49 @@ function countWords(string) {
 
 }
 
-countWords("hello you guys");
+// countWords("hello you guys");
 
-function containsDigit() {
+function containsDigit(_input) {
+  let string1 = String(_input);
+  for (let i = 0; i < string1.length; i++){
+    if(!isNaN(string1.charAt(i)) && ! (string1.charAt(i)===" ") ){ 
+      return true;
+    }
+  }
+
+  return false; 
 }
 
-function containsLowerCase() {
+function containsLowerCase(str) {
+  return str.toUpperCase() !=str; 
+ 
 }
 
-function containsUpperCase() {
+function containsUpperCase(str) {
+  return str.toLowerCase() !=str; 
 }
 
-function containsNonAlphanumeric() {
+function containsNonAlphanumeric(str) {
+  return str.length === 1 && str.match(/[a-z]/i);
+  
 }
 
-function containsSpace() {
+
+function containsSpace(s) {
+  return s.indexOf(' ') >= 0;
 }
 
-function digits() {
+function digits(num) {
+  num = num.toString();
+  let numArr = [];
+  for (let i =0; i < num.length; i++){
+    numArr[i] = parseInt(num[i]);
+  }{
+    if (num < 0){
+      a=a*-1;
+    }
+  }
+  return numArr;
 }
 
 function truncate() {
